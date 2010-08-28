@@ -27,19 +27,24 @@ screencast](http://peepcode.com/products/meet-emacs) helpful. The
 1. cd ~/Library/Preferences/Aquamacs Emacs/
 2. git clone git://github.com/bashu/aquamacs-starter-kit.git
 3. add the following to ~/Library/Preferences/Aquamacs Emacs/Preferences.el
-<pre>
-<code>
-;; Aquamacs Starter Kit
-;; http://github.com/bashu/aquamacs-starter-kit
-;; set the dotfiles-dir variable to this directory
-(setq kitfiles-dir (concat (file-name-directory
+
+       <pre><code>
+       ;; This is the Aquamacs Preferences file.
+       ;; Add Emacs-Lisp code here that should be executed whenever
+       ;; you start Aquamacs Emacs. If errors occur, Aquamacs will stop
+       ;; evaluating this file and print errors in the *Messags* buffer.
+       ;; Use this file in place of ~/.emacs (which is loaded as well.)
+
+       ;; Aquamacs Emacs Starter Kit
+       ;; set the dotfiles-dir variable to this directory
+       (setq kitfiles-dir (concat (file-name-directory
                     (or (buffer-file-name) load-file-name)) "/aquamacs-starter-kit"))
 
-;; set up our various directories to load
-(add-to-list 'load-path kitfiles-dir)
-(require 'init)
-</code>
-</pre>
+       ;; set up our various directories to load
+       (add-to-list 'load-path kitfiles-dir)
+       (require 'init)
+       </code></pre>
+
 4. Launch Aquamacs!
 
 If you find yourself missing some autoloads after an update (which
@@ -94,34 +99,3 @@ packages. If you run into problems with such a package, try removing
 everything from inside the elpa/ directory and invoking M-x
 starter-kit-elpa-install in a fresh instance.
 
-## Variants of Emacs
-
-The Starter Kit is designed to work with GNU Emacs version 22 or
-greater. Using it with forks or other variants is not supported. It
-probably won't work with XEmacs, though some have reported getting it
-to work with Aquamacs. However, since Aquamacs is not portable,
-it's difficult to test in it, and breakage is common.
-
-## Contributing
-
-If you know your way around Emacs, please try out the starter kit as a
-replacement for your regular dotfiles for a while. If there's anything
-you just can't live without, add it or let me know so I can add
-it. Take a look at what happens in init.el to get started.
-
-Also: see the file TODO. Helping submit new libraries to ELPA is the
-easiest way to help out. There are two ways you can do this: either
-take new libraries and make them ready for ELPA, dropping them in the
-elpa-to-submit directory or take files that are already in
-elpa-to-submit, ensuring all their dependencies are correctly loaded
-into ELPA, and sending them to the ELPA maintainer. There are details
-at http://tromey.com/elpa/upload.html for how ELPA submission
-works. Grep the project for TODO for other things.
-
-Files are licensed under the same license as Emacs unless otherwise
-specified. See the file COPYING for details.
-
-The latest version is at http://github.com/technomancy/emacs-starter-kit/
-
-On Unix, /home/$USER/.emacs.d, on windows Documents and Settings/%your
-user name%/Application Data
