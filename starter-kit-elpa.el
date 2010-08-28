@@ -11,7 +11,8 @@
                                    'yaml-mode
                                    'find-file-in-project
                                    'magit
-                                   'gist)
+                                   'gist
+                                   'yasnippet-bundle)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
@@ -32,8 +33,8 @@ just have to assume it's online."
   (if (and (functionp 'network-interface-list)
            (network-interface-list))
       (some (lambda (iface) (unless (equal "lo" (car iface))
-                         (member 'up (first (last (network-interface-info
-                                                   (car iface)))))))
+			      (member 'up (first (last (network-interface-info
+							(car iface)))))))
             (network-interface-list))
     t))
 
