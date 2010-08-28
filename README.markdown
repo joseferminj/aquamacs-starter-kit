@@ -28,7 +28,8 @@ screencast](http://peepcode.com/products/meet-emacs) helpful. The
 2. git clone git://github.com/bashu/aquamacs-starter-kit.git
 3. add the following to ~/Library/Preferences/Aquamacs Emacs/Preferences.el
 
-       <pre><code>
+       <pre>
+       <code>
        ;; This is the Aquamacs Preferences file.
        ;; Add Emacs-Lisp code here that should be executed whenever
        ;; you start Aquamacs Emacs. If errors occur, Aquamacs will stop
@@ -43,7 +44,8 @@ screencast](http://peepcode.com/products/meet-emacs) helpful. The
        ;; set up our various directories to load
        (add-to-list 'load-path kitfiles-dir)
        (require 'init)
-       </code></pre>
+       </code>
+       </pre>
 
 4. Launch Aquamacs!
 
