@@ -56,24 +56,6 @@
        (add-hook 'python-mode-hook 'flymake-find-file-hook)
        )
 
-     ;; Select text block and press \C-c\C-t and voila!
-     (defun python-insert-translation (from to &optional buffer)
-       (interactive "*r")
-       (save-excursion
-         (save-restriction
-           (narrow-to-region from to)
-           (goto-char from)
-           (iso-iso2sgml from to)
-           (insert "_(")
-           (goto-char (point-max))
-           (insert ")")
-           (point-max))))
-
-     (add-hook 'python-mode-hook
-               '(lambda ()
-                  (local-set-key "\C-c\C-t" 'python-insert-translation)
-                  ))
-
      (add-hook 'python-mode-hook 'linum-mode)
      
      (setq-default indent-tabs-mode nil)
@@ -86,6 +68,9 @@
 
 ;; Cython Mode
 (autoload 'cython-mode "cython-mode" "Mode for editing Cython source files")
+
+;; Require Django Mode
+(require 'django-mode)
 
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
 (add-to-list 'auto-mode-alist '("\\.pxd\\'" . cython-mode))
