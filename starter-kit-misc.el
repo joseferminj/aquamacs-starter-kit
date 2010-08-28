@@ -16,6 +16,7 @@
 (ansi-color-for-comint-mode-on)
 
 (setq visible-bell t
+      auto-window-vscroll nil
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
       inhibit-startup-message t
@@ -36,6 +37,12 @@
 
 (add-to-list 'safe-local-variable-values '(lexical-binding . t))
 (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
+
+;; Disable line wrap
+(setq default-truncate-lines t)
+
+;; Make side by side buffers function the same as the main window
+(setq truncate-partial-width-windows nil)
 
 ;; Set this to whatever browser you use
 ;; (setq browse-url-browser-function 'browse-url-firefox)
@@ -90,6 +97,7 @@
                                         (concat dotfiles-dir "backups")))))
 
 ;; nxhtml stuff
+(load "autostart.el")
 (setq mumamo-chunk-coloring 'submode-colored
       nxhtml-skip-welcome t
       indent-region-mode t
