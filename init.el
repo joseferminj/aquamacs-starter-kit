@@ -25,6 +25,8 @@
 (add-to-list 'load-path dotfiles-dir)
 
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
+;; Path to nxhtml package
+(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/nxhtml"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
@@ -43,6 +45,7 @@
 (require 'uniquify)
 (require 'ansi-color)
 (require 'recentf)
+(require 'psvn)
 
 ;; backport some functionality to Emacs 22 if needed
 (require 'dominating-file)
@@ -54,10 +57,12 @@
 (require 'starter-kit-misc)
 (require 'starter-kit-registers)
 (require 'starter-kit-eshell)
+(require 'starter-kit-dired)
 (require 'starter-kit-lisp)
 (require 'starter-kit-perl)
 (require 'starter-kit-ruby)
 (require 'starter-kit-js)
+(require 'starter-kit-python)
 
 (regen-autoloads)
 (load custom-file 'noerror)
@@ -71,6 +76,6 @@
 (if (file-exists-p system-specific-config) (load system-specific-config))
 (if (file-exists-p user-specific-config) (load user-specific-config))
 (if (file-exists-p user-specific-dir)
-  (mapc #'load (directory-files user-specific-dir nil ".*el$")))
+    (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
-;;; init.el ends here
+(provide 'init)
