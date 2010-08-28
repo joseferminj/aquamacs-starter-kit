@@ -40,7 +40,6 @@ screencast](http://peepcode.com/products/meet-emacs) helpful. The
 (require 'init)
 </code>
 </pre>
-
 4. Launch Aquamacs!
 
 If you find yourself missing some autoloads after an update (which
