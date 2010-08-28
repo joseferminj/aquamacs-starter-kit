@@ -48,6 +48,9 @@
              (list "pyflakes" (list local-file)))))
        
 
+       ;; Show flymake error without mouse
+       (load "flymake-cursor.el")
+
        (add-to-list 'flymake-allowed-file-name-masks
                     '("\\.py\\'" flymake-pyflakes-init))
        (add-hook 'python-mode-hook 'flymake-find-file-hook)
@@ -71,6 +74,8 @@
                   (local-set-key "\C-c\C-t" 'python-insert-translation)
                   ))
 
+     (add-hook 'python-mode-hook 'linum-mode)
+     
      (setq-default indent-tabs-mode nil)
      (setq-default tab-width 4)
      (setq-default py-indent-offset 4)
