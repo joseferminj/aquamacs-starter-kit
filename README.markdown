@@ -1,4 +1,9 @@
-# Emacs Starter Kit
+## Aquamacs Emacs Starter Kit
+
+Forked from Phil Hagelberg's
+[emacs-starter-kit](http://github.com/technomancy/emacs-starter-kit/),
+but slimmed down for use with the already heavily customized Aquamacs
+Mac OS X version of emacs.
 
 The Starter Kit should provide a saner set of defaults than you get
 normally with Emacs. It was originally intended for beginners, but it
@@ -6,7 +11,7 @@ should provide a reasonable working environment for anyone using Emacs
 for dynamic languages. It also bundles a number of useful libraries
 that are not distributed with Emacs for various reasons.
 
-The latest version is at http://github.com/technomancy/emacs-starter-kit/
+The latest version is at http://github.com/bashu/aquamacs-starter-kit/
 
 ## Learning
 
@@ -19,28 +24,29 @@ screencast](http://peepcode.com/products/meet-emacs) helpful. The
 
 ## Installation
 
-1. Install GNU Emacs (at least version 22, 23 is preferred)
-   Use your package manager if you have one.
-   Otherwise Mac users may get [some prebuilt binaries](http://emacsformacosx.com/), and
-   Windows users can get them [from GNU](http://ftp.gnu.org/pub/gnu/emacs/windows/emacs-23.1-bin-i386.zip).
-2. Move the directory containing this file to ~/.emacs.d
-   (If you already have a directory at ~/.emacs.d move it out of the
-   way and put this there instead.)
-3. Launch Emacs!
+1. cd ~/Library/Preferences/Aquamacs Emacs/
+2. git clone git://github.com/bashu/aquamacs-starter-kit.git
+3. add the following to ~/Library/Preferences/Aquamacs Emacs/Preferences.el
+<pre>
+<code>
+;; Aquamacs Starter Kit
+;; http://github.com/bashu/aquamacs-starter-kit
+;; set the dotfiles-dir variable to this directory
+(setq kitfiles-dir (concat (file-name-directory
+                    (or (buffer-file-name) load-file-name)) "/aquamacs-starter-kit"))
+
+;; set up our various directories to load
+(add-to-list 'load-path kitfiles-dir)
+(require 'init)
+</code>
+</pre>
+
+4. Launch Aquamacs!
 
 If you find yourself missing some autoloads after an update (which
 should manifest itself as "void function: foobar" errors) try M-x
 regen-autoloads. After some updates an M-x recompile-init will be
 necessary; this should be noted in the commit messages.
-
-If you want to keep your regular ~/.emacs.d in place and just launch a
-single instance using the starter kit, try the following invocation:
-
-  $ emacs -q -l ~/src/emacs-starter-kit/init.el
-
-Note that having a ~/.emacs file might override the starter kit
-loading, so if you've having trouble loading it, make sure that file
-is not present.
 
 ## Structure
 
