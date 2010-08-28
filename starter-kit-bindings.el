@@ -17,10 +17,6 @@
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
-;; Font size
-(define-key global-map (kbd "C-+") 'text-scale-increase)
-(define-key global-map (kbd "C--") 'text-scale-decrease)
-
 ;; Use regex searches by default.
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "\C-r") 'isearch-backward-regexp)
@@ -88,6 +84,26 @@
 ;; Org
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+
+;; Prefer backward-kill-word over Backspace
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-c\C-k" 'kill-region)
+
+;; Make C-c C-a “select all” (this is a much better idea than rebinding the standard C-a)
+(global-set-key "\C-c\C-a" 'mark-whole-buffer)
+
+;; Additional ‘C-x LETTER’ key bindings for useful commands (notice uppercase LETTER)
+(global-set-key "\C-xB" 'bury-buffer)
+(global-set-key "\C-xE" 'apply-macro-to-region-lines)
+(global-set-key "\C-xI" 'insert-buffer)
+
+;; Additional ‘C-c LETTER’ key bindings for useful commands
+(global-set-key "\C-cg" 'goto-line)
+(global-set-key "\C-cG" 'goto-char)
+(global-set-key "\C-cw" 'delete-region) ; ala C-w and M-C-w
+(global-set-key "\C-cc" 'comment-region)
+(global-set-key "\C-cu" 'uncomment-region)
 
 (provide 'starter-kit-bindings)
 ;;; starter-kit-bindings.el ends here
