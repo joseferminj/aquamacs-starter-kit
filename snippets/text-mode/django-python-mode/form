@@ -2,7 +2,7 @@
 #name : class ... (forms.Form): ...
 #expand-env: ((yas/indent-line 'fixed))
 # --
-class ${1:Formname}(forms.Form):
+class ${1:FormName}(forms.Form):
     """${2:($1 description)}"""
     ${3:def __init__(self, *args, **kwargs):
          ${4:}

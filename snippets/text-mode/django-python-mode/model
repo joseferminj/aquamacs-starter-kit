@@ -2,7 +2,7 @@
 #name : class ... (models.Model): ...
 #expand-env: ((yas/indent-line 'fixed))
 # --
-class ${1:Modelname}(models.Model):
+class ${1:ModelName}(models.Model):
     """${2:($1 description)}"""
 
     $0
