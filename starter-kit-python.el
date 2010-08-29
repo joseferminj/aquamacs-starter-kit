@@ -56,7 +56,10 @@
        (add-hook 'python-mode-hook 'flymake-find-file-hook)
        )
 
-     (add-hook 'python-mode-hook 'linum-mode)
+     (add-hook 'python-mode-hook
+               (lambda ()
+                 (font-lock-add-keywords nil
+                                         '(("\\<\\(FIXME\\|\\TODO\\|XXX\\):" 1 font-lock-warning-face t)))))
      
      (setq-default indent-tabs-mode nil)
      (setq-default tab-width 4)
@@ -68,9 +71,6 @@
 
 ;; Cython Mode
 (autoload 'cython-mode "cython-mode" "Mode for editing Cython source files")
-
-;; Require Django Mode
-(require 'django-mode)
 
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
 (add-to-list 'auto-mode-alist '("\\.pxd\\'" . cython-mode))
