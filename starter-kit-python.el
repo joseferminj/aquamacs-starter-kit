@@ -1,4 +1,7 @@
-;;; 
+;;; starter-kit-python.el --- Some helpful Python code
+;;
+;; Part of the Emacs Starter Kit
+
 (eval-after-load 'python-mode
   '(progn
      ;; Ropemacs Settings
@@ -35,7 +38,7 @@
                         (rope-open-project (concat default-directory "..")))
                        )))
 
-     ;; Flymake for python configuration
+     ;; Flymake for python configuration (pyflakes required)
      (when (require 'flymake)
        (defun flymake-pyflakes-init ()
          "Pyflakes flymake python file checking"
@@ -48,7 +51,7 @@
              (list "pyflakes" (list local-file)))))
        
 
-       ;; Show flymake error without mouse
+       ;; Show flymake errors without mouse
        (load "flymake-cursor.el")
 
        (add-to-list 'flymake-allowed-file-name-masks
@@ -56,11 +59,13 @@
        (add-hook 'python-mode-hook 'flymake-find-file-hook)
        )
 
+     ;; Misc. hooks
      (add-hook 'python-mode-hook
                (lambda ()
                  (font-lock-add-keywords nil
                                          '(("\\<\\(FIXME\\|\\TODO\\|XXX\\):" 1 font-lock-warning-face t)))))
-     
+
+     ;; Some defaults
      (setq-default indent-tabs-mode nil)
      (setq-default tab-width 4)
      (setq-default py-indent-offset 4)
