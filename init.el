@@ -64,6 +64,7 @@
 (require 'starter-kit-js)
 (require 'starter-kit-python)
 (require 'starter-kit-yasnippet)
+(require 'starter-kit-django)
 
 (regen-autoloads)
 (load custom-file 'noerror)
