@@ -16,7 +16,10 @@
 
 (require 'python-mode)
 
+;; Define new derived mode
 (define-derived-mode django-python-mode python-mode "Python (Django) Mode" "Major mode for Django web framework.")
+
+;; Font lock faces
 (add-hook 'django-python-mode-hook
           (lambda ()
             (font-lock-add-keywords nil
@@ -29,7 +32,7 @@
                     ))
           )
 
-;; autoloads
+;; Autoloads
 (add-to-list 'auto-mode-alist '("\\<\\(admin.py\\)" . django-python-mode))
 (add-to-list 'auto-mode-alist '("\\<\\(context_processors.py\\)" . django-python-mode))
 (add-to-list 'auto-mode-alist '("\\<\\(fields.py\\)" . django-python-mode))
@@ -43,7 +46,7 @@
 (add-to-list 'auto-mode-alist '("\\<\\(views.py\\)" . django-python-mode))
 (add-to-list 'auto-mode-alist '("\\<\\(widgets.py\\)" . django-python-mode))
 
-;; functions
+;; Functions
 (defun django-python-insert-translation (from to &optional buffer)
   (interactive "*r")
   (save-excursion
@@ -56,6 +59,7 @@
       (insert ")")
       (point-max))))
 
+;; Hooks
 (add-hook 'django-python-mode-hook
           '(lambda ()
              (local-set-key "\C-c\C-t" 'django-python-insert-translation)
