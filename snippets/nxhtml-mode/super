@@ -1,0 +1,5 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {{ block.super }}
+#group : django template tags
+# --
+{{ block.super }}

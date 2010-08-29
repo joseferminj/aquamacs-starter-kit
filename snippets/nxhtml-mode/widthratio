@@ -1,0 +1,5 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {% widthratio ... %}
+#group : django template tags
+# --
+{% widthratio ${1:this_value} ${2:max_value} ${3:100} %}

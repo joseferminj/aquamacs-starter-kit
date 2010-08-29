@@ -1,0 +1,5 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {% firstof ... %}
+#group : django template tags
+# --
+{% firstof $1 %}

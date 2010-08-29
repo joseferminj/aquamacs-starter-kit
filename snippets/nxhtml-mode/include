@@ -1,0 +1,5 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {% include "..." %}
+#group : django template tags
+# --
+{% include ${1:"$2"} %}

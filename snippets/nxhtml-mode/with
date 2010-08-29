@@ -1,0 +1,7 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {% with ... as ... %} ... {% endwith %}
+#group : django template tags
+# --
+{% with $1 as $2 %}
+	$3
+{% endwith %}

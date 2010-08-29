@@ -1,0 +1,5 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {% ssi ... ... %}
+#group : django template tags
+# --
+{% ssi $1 ${2:parsed} %}

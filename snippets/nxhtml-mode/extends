@@ -1,0 +1,5 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {% extends "..." %}
+#group : django template tags
+# --
+{% extends '${1:base.html}' %}

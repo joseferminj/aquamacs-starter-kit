@@ -1,0 +1,5 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : {% now "..." %}
+#group : django template tags
+# --
+{% now "$1" %}
