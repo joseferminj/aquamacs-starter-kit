@@ -1,0 +1,4 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : ... = models.ManyToManyField(...)
+# --
+${1:FIELDNAME} = models.ManyToManyField(${2:RELATED_MODEL})

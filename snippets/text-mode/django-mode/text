@@ -1,3 +1,0 @@
-#name : ... = models.TextField(...)
-# --
-${1:FIELDNAME} = models.TextField(${2:blank=True})

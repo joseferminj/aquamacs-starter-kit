@@ -1,0 +1,4 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : ... = models.DateField(...)
+# --
+${1:FIELDNAME} = models.DateField(${2:blank=True, null=True, }${3:auto_now_add=True})

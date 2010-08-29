@@ -1,0 +1,4 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : ... = models.ForeignKey(...)
+# --
+${1:FIELDNAME} = models.ForeignKey(${2:RELATED_MODEL})

@@ -1,0 +1,4 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : ... = models.NullBooleanField(...)
+# --
+${1:FIELDNAME} = models.NullBooleanField(${2:default=True})

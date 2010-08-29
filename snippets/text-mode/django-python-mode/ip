@@ -1,0 +1,4 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
+#name : ... = models.IPAddressField(...)
+# --
+${1:FIELDNAME} = models.IPAddressField(${2:blank=True})

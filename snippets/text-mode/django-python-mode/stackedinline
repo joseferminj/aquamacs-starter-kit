@@ -1,3 +1,4 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
 #name : class ... (admin.StackedInline): ...
 # --
 class ${1:ModelName}Inline(admin.StackedInline):

@@ -1,3 +1,0 @@
-#name : ... = models.TimeField(...)
-# --
-${1:FIELDNAME} = models.TimeField(${2:blank=True})

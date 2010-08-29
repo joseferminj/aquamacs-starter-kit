@@ -1,3 +1,4 @@
+#contributor : Basil Shubin <basil.shubin@gmail.com>
 #name : ... = models.SlugField(...)
 # --
 ${1:slug} = models.SlugField()

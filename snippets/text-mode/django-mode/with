@@ -1,5 +1,0 @@
-#name : {% with ... as ... %} ... {% endwith %}
-# --
-{% with $1 as $2 %}
-	$3
-{% endwith %}
