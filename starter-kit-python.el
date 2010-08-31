@@ -63,7 +63,7 @@
      (add-hook 'python-mode-hook
                (lambda ()
                  (font-lock-add-keywords nil
-                                         '(("\\<\\(FIXME\\|\\TODO\\|XXX\\):" 1 font-lock-warning-face t)))))
+                                         '(("\\<\\(FIXME\\|\\TODO\\|XXX\\)" 1 font-lock-warning-face prepend)))))
 
      ;; Some defaults
      (setq-default indent-tabs-mode nil)

@@ -19,7 +19,8 @@
       (point-max))))
 
 ;; Hooks
-(add-hook 'django-nxhtml-mumamo-mode-hook
+;; FIX: Mode hooks
+(add-hook 'html-mode-hook
           (lambda ()
             (local-set-key "\C-c\C-t" 'django-html-insert-translation)
             (setq indent-tabs-mode nil)
