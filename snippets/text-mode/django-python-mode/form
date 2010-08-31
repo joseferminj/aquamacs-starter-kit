@@ -3,17 +3,18 @@
 #expand-env: ((yas/indent-line 'fixed))
 # --
 class ${1:FormName}(forms.Form):
-    """${2:($1 description)}"""
+    """ ${2:$1 description} """
+
     ${3:def __init__(self, *args, **kwargs):
-         ${4:}
-         super($1, self).__init__(*args, **kwargs)}
+        super($1, self).__init__(*args, **kwargs)}
+        $4
 
     $0
 
     ${5:def clean_${6:fieldname}(self):
-         $7
+        $7
 		return self.cleaned_data['$6']}
 
     ${8:def clean(self):
-         $9
-         return self.cleaned_data}
+        $9
+        return self.cleaned_data}

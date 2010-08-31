@@ -1,4 +1,4 @@
 #contributor : Basil Shubin <basil.shubin@gmail.com>
 #name : ... = models.FileField(...)
 # --
-${1:FIELDNAME} = models.FileField(upload_to=${1:/path/for/upload})
+${1:FIELDNAME} = models.FileField(upload_to=${1:'/path/for/upload'})
