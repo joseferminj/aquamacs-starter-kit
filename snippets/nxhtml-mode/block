@@ -2,6 +2,6 @@
 #name : {% block ... %} ... {% endblock %}
 #group : django template tags
 # --
-{% block $1 %}
-   $2
+{% block ${1:name} %}
+   $0
 {% endblock $1 %}

@@ -3,5 +3,5 @@
 #group : django template tags
 # --
 {% comment %}
-   $1
+   $0
 {% endcomment %}

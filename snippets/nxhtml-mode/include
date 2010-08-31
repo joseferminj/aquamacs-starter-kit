@@ -2,4 +2,4 @@
 #name : {% include "..." %}
 #group : django template tags
 # --
-{% include ${1:"$2"} %}
+{% include "${1:include.html}" %}

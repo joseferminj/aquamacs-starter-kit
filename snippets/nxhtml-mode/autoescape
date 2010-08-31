@@ -3,5 +3,5 @@
 #group : django template tags
 # --
 {% autoescape ${1:off} %}
-   $2
+   $0
 {% endautoescape %}

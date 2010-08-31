@@ -3,5 +3,5 @@
 #group : django template tags
 # --
 {% if $1 %}
-   $2
+   $0
 {% endif %}

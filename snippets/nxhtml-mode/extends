@@ -2,4 +2,4 @@
 #name : {% extends "..." %}
 #group : django template tags
 # --
-{% extends '${1:base.html}' %}
+{% extends "${1:base.html}" %}

@@ -3,5 +3,5 @@
 #group : django template tags
 # --
 {% with $1 as $2 %}
-	$3
+   $0
 {% endwith %}

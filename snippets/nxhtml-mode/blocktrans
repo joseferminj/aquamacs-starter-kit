@@ -3,5 +3,5 @@
 #group : django template tags
 # --
 {% blocktrans ${1:with ${2:var1} as ${3:var2}} %}
-   $4{{ $3 }}
+   $0
 {% endblocktrans %}
