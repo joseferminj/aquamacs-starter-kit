@@ -19,12 +19,14 @@
       (point-max))))
 
 ;; Hooks
-;; FIX: Mode hooks
-(add-hook 'html-mode-hook
-          (lambda ()
-            (local-set-key "\C-c\C-t" 'django-html-insert-translation)
-            (setq indent-tabs-mode nil)
-            ))
+(dolist (mode '(css-mode-hook html-mode-hook sgml-mode-hook xml-mode-hook django-mode-hook nxml-mode-hook nxhmtl-mode-hook)) 
+  (add-hook mode
+            (lambda ()
+              (local-set-key "\C-c\C-t" 'django-html-insert-translation)
+              (setq indent-tabs-mode nil)
+              )
+            )
+  )
 
 ;; Load Django (Python) mode
 (require 'django-python-mode)
