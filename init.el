@@ -30,7 +30,8 @@
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
-(setq custom-file (concat dotfiles-dir "custom.el"))
+;; Use Aquaemacs customizations.el
+(setq custom-file (concat "customizations.el"))
 
 (require 'package)
 (package-initialize)
