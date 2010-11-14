@@ -8,11 +8,11 @@
      (setenv "PYTHONPATH"
              (concat
               (getenv "PYTHONPATH") ":"
-              (concat dotfiles-dir "/elpa-to-submit/emacs-for-python")))
+              (concat dotfiles-dir "/vendor/emacs-for-python")))
 
      (setq pymacs-load-path
            (list
-            (concat dotfiles-dir "/elpa-to-submit/emacs-for-python/ropemacs")))
+            (concat dotfiles-dir "/vendor/emacs-for-python/ropemacs")))
 
      ;; Pymacs
      (autoload 'pymacs-apply "pymacs")
@@ -59,12 +59,6 @@
        (add-hook 'python-mode-hook 'flymake-find-file-hook)
        )
 
-     ;; Misc. hooks
-     (add-hook 'python-mode-hook
-               (lambda ()
-                 (font-lock-add-keywords nil
-                                         '(("\\<\\(FIXME\\|\\TODO\\|XXX\\)" 1 font-lock-warning-face prepend)))))
-
      ;; Some defaults
      (setq-default indent-tabs-mode nil)
      (setq-default tab-width 4)
@@ -84,5 +78,7 @@
 ;; Other files for python mode
 (add-to-list 'auto-mode-alist '("wscript" . python-mode))
 (add-to-list 'auto-mode-alist '("SConscript" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 
 (provide 'starter-kit-python)
+;; starter-kit-python.el ends here

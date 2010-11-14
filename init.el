@@ -25,13 +25,16 @@
 (add-to-list 'load-path dotfiles-dir)
 
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
+
+;; Load misc vendor modes
+(add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 ;; Path to nxhtml package
-(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/nxhtml"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/nxhtml"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 ;; Use Aquaemacs customizations.el
-(setq custom-file (concat "customizations.el"))
+(setq custom-file (concat dotfiles-dir "../customizations.el"))
 
 (require 'package)
 (package-initialize)
