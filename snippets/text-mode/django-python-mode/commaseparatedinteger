@@ -1,4 +1,4 @@
 #contributor : Basil Shubin <basil.shubin@gmail.com>
 #name : ... = models.CommaSeparatedIntegerField(...)
 # --
-${1:FIELDNAME} = models.CommaSeparatedIntegerField(max_length=$2)
+${1:FIELDNAME} = models.CommaSeparatedIntegerField(${3:_('${4:FIELDNAME}'), }max_length=${2:128})

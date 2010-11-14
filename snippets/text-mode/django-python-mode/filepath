@@ -1,4 +1,4 @@
 #contributor : Basil Shubin <basil.shubin@gmail.com>
 #name : ... = models.FilePathField(...)
 # --
-${1:FIELDNAME} = models.FilePathField(path=${1:'/location/of/choices'}${2:, match=${3:'regex'}}${4:, recursive=True})
+${1:FIELDNAME} = models.FilePathField(${6:_('${7:FIELDNAME}'), }path=${2:'/location/of/choices'}${3:, match=${4:'regex'}}${5:, recursive=True})

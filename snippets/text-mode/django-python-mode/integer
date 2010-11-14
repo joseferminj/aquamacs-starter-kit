@@ -1,4 +1,4 @@
 #contributor : Basil Shubin <basil.shubin@gmail.com>
 #name : ... = models.IntegerField(...)
 # --
-${1:FIELDNAME} = models.IntegerField(${2:blank=True, null=True})
+${1:FIELDNAME} = models.IntegerField(${3:_('${4:FIELDNAME}'), }${2:blank=True, null=True})

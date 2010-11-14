@@ -1,4 +1,4 @@
 #contributor : Basil Shubin <basil.shubin@gmail.com>
 #name : ... = models.EmailField(...)
 # --
-${1:FIELDNAME} = models.EmailField()
+${1:FIELDNAME} = models.EmailField(${2:_('${3:FIELDNAME}')})
