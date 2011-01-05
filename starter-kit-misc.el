@@ -89,10 +89,12 @@
                                         "~/Library/Application Support/Aquamacs Emacs/Backups"))))
 
 ;; nxhtml stuff
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/nxhtml"))
+(add-to-list 'load-path (concat vendors-files-dir "/nxhtml"))
 (load "autostart.el")
+
 ;; Disable frustating popups
 (setq debug-on-error nil)
+
 (setq mumamo-chunk-coloring 'submode-colored
       nxhtml-skip-welcome t
       indent-region-mode t
