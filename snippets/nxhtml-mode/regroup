@@ -1,5 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% regroup ... by ... as ... %}
-#group : django template tags
-# --
-{% regroup $1 by $2 as $3 %}

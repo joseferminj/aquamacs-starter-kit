@@ -1,4 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : ... = models.XMLField(...)
-# --
-${1:FIELDNAME} = models.XMLField(schema_path=${2:'/path/to/RelaxNG'}${3:, blank=True})

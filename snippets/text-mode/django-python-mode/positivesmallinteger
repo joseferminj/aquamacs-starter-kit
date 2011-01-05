@@ -1,4 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : ... = models.PositiveSmallIntegerField(...)
-# --
-${1:FIELDNAME} = models.PositiveSmallIntegerField(${2:blank=True, null=True})

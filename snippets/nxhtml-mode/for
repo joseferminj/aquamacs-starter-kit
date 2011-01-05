@@ -1,7 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% for ... in ... %} ... {% endfor %}
-#group : django template tags
-# --
-{% for $1 in $2 %}
-   $0
-{% endfor %}

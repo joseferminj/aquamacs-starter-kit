@@ -1,4 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : ... = models.FloatField(...)
-# --
-${1:FIELDNAME} = models.FloatField(${2:_('${3:FIELDNAME}')})

@@ -1,5 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% load ... %}
-#group : django template tags
-# --
-{% load $1 %}

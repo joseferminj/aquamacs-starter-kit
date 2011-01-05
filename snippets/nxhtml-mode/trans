@@ -1,5 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% trans "..." %}
-#group : django template tags
-# --
-{% trans "${1:string to translate}" %}

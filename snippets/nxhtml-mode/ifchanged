@@ -1,7 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% ifchanged ... %} ... {% endifchanged %}
-#group : django template tags
-# --
-{% ifchanged $1 %}
-   $0
-{% endifchanged %}

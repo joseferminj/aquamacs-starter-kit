@@ -1,7 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% ifnotequal ... ... %} ... {% endifnotequal %}
-#group : django template tags
-# --
-{% ifnotequal $1 $2 %}
-	$0
-{% endifnotequal %}

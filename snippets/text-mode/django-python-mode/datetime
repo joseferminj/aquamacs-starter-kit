@@ -1,4 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : ... = models.DateTimeField(...)
-# --
-${1:FIELDNAME} = models.DateTimeField(${4:_('${5:FIELDNAME}'), }${2:blank=True, null=True, }${3:auto_now_add=True})

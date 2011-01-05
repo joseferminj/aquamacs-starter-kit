@@ -1,4 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : ... = models.AutoField(...)
-# --
-${1:FIELDNAME} = models.AutoField()

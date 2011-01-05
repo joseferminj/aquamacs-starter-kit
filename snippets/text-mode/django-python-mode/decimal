@@ -1,4 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : ... = models.DecimalField(...)
-# --
-${1:FIELDNAME} = models.DecimalField(${4:_('${5:FIELDNAME}'), }max_digits=${2:6}, decimal_places=${3:2})

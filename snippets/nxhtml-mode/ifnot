@@ -1,7 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% if not ... %} ... {% endif %}
-#group : django template tags
-# --
-{% if not $1 %}
-   $0
-{% endif %}

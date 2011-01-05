@@ -1,7 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : {% autoescape ... %} ... {% endautoescape %}
-#group : django template tags
-# --
-{% autoescape ${1:off} %}
-   $0
-{% endautoescape %}

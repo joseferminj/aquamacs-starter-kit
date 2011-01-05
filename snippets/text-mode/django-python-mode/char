@@ -1,4 +1,0 @@
-#contributor : Basil Shubin <basil.shubin@gmail.com>
-#name : ... = models.CharField(...)
-# --
-${1:FIELDNAME} = models.CharField(${5:_('${6:FIELDNAME}'), }${3:blank=${4:True}, }max_length=${2:255})
