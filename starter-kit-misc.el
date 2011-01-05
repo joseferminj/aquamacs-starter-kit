@@ -16,7 +16,7 @@
 (ansi-color-for-comint-mode-on)
 
 (setq visible-bell t
-      auto-window-vscroll nil
+      fringe-mode (cons 4 0)
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
       inhibit-startup-message t
@@ -27,32 +27,20 @@
       require-final-newline t
       truncate-partial-width-windows nil
       uniquify-buffer-name-style 'forward
+      ffap-machine-p-known 'reject
       whitespace-style '(trailing lines space-before-tab
-                                  indentation space-after-tab)
+                                  face indentation space-after-tab)
       whitespace-line-column 100
       ediff-window-setup-function 'ediff-setup-windows-plain
-      oddmuse-directory (concat dotfiles-dir "oddmuse")
+      oddmuse-directory "~/Library/Application Support/Aquamacs Emacs/Oddmuse"
       xterm-mouse-mode t
-      save-place-file (concat dotfiles-dir "../places.el"))
+)
 
 (add-to-list 'safe-local-variable-values '(lexical-binding . t))
 (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 
-;; Disable line wrap
-(setq default-truncate-lines t)
-
-;; Make side by side buffers function the same as the main window
-(setq truncate-partial-width-windows nil)
-
 ;; Set this to whatever browser you use
-;; (setq browse-url-browser-function 'browse-url-firefox)
-;; (setq browse-url-browser-function 'browse-default-windows-browser)
-;; (setq browse-url-browser-function 'browse-default-kde)
-;; (setq browse-url-browser-function 'browse-default-epiphany)
-;; (setq browse-url-browser-function 'browse-default-w3m)
-;; (setq browse-url-browser-function 'browse-url-generic
-;;       browse-url-generic-program "~/src/conkeror/conkeror")
-(setq browse-url-browser-function 'browse-default-macosx-browser)
+(setq browse-url-browser-function 'browse-url-safari)
 
 ;; Transparently open compressed files
 (auto-compression-mode t)
@@ -88,16 +76,23 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (random t) ;; Seed the random-number generator
 
+(defalias 'auto-revert-tail-mode 'tail-mode)
+
 ;; Hippie expand: at times perhaps too hip
 (delete 'try-expand-line hippie-expand-try-functions-list)
 (delete 'try-expand-list hippie-expand-try-functions-list)
+(delete 'try-complete-file-name-partially hippie-expand-try-functions-list)
+(delete 'try-complete-file-name hippie-expand-try-functions-list)
 
 ;; Don't clutter up directories with files~
 (setq backup-directory-alist `(("." . ,(expand-file-name
-                                        (concat dotfiles-dir "backups")))))
+                                        "~/Library/Application Support/Aquamacs Emacs/Backups"))))
 
 ;; nxhtml stuff
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/nxhtml"))
 (load "autostart.el")
+;; Disable frustating popups
+(setq debug-on-error nil)
 (setq mumamo-chunk-coloring 'submode-colored
       nxhtml-skip-welcome t
       indent-region-mode t
@@ -119,7 +114,8 @@
     (add-to-list 'grep-find-ignored-files "*.class")))
 
 ;; Default to unified diffs
-(setq diff-switches "-u")
+(setq diff-switches "-u -w"
+      magit-diff-options "-w")
 
 ;; Cosmetics
 
