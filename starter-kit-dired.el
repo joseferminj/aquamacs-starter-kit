@@ -3,6 +3,7 @@
 ;; Part of the Emacs Starter Kit
 
 (require 'dired-x)
+
 ;; Omit unwanted files in dired-mode
 (setq dired-omit-files 
       (rx (or (seq bol (? ".") "#") ;; emacs autosave files
