@@ -18,25 +18,24 @@
 ;; Load path etc.
 
 (setq dotfiles-dir (file-name-directory
-                    (or (buffer-file-name) load-file-name)))
+		    (or (buffer-file-name) load-file-name)))
 
 ;; Load up ELPA, the package manager
 
 (add-to-list 'load-path dotfiles-dir)
-
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 
-;; Load misc vendor modes
-(add-to-list 'load-path (concat dotfiles-dir "/vendor"))
-;; Path to nxhtml package
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/nxhtml"))
+;; Load miscellaneous vendors modes
+(setq vendor-files-dir (concat dotfiles-dir "/vendor"))
+(add-to-list 'load-path vendor-files-dir)
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
-;; Use Aquaemacs customizations.el
-(setq custom-file (concat dotfiles-dir "../customizations.el"))
 
 (require 'package)
+(dolist (source '(("technomancy" . "http://repo.technomancy.us/emacs/")
+		  ("elpa" . "http://tromey.com/elpa/")))
+  (add-to-list 'package-archives source t))
 (package-initialize)
 (require 'starter-kit-elpa)
 
@@ -61,11 +60,10 @@
 (require 'starter-kit-misc)
 (require 'starter-kit-registers)
 (require 'starter-kit-eshell)
-(require 'starter-kit-dired)
 (require 'starter-kit-lisp)
-(require 'starter-kit-perl)
 (require 'starter-kit-ruby)
 (require 'starter-kit-js)
+(require 'starter-kit-dired)
 (require 'starter-kit-python)
 (require 'starter-kit-yasnippet)
 (require 'starter-kit-django)
@@ -74,9 +72,9 @@
 (load custom-file 'noerror)
 
 ;; You can keep system- or user-specific customizations here
-(setq system-specific-config (concat dotfiles-dir system-name ".el")
-      user-specific-config (concat dotfiles-dir user-login-name ".el")
-      user-specific-dir (concat dotfiles-dir user-login-name))
+(setq system-specific-config (concat "~/Library/Preferences/Aquamacs Emacs/" system-name ".el")
+      user-specific-config (concat "~/Library/Preferences/Aquamacs Emacs/" user-login-name ".el")
+      user-specific-dir (concat "~/Library/Preferences/Aquamacs Emacs/" user-login-name))
 (add-to-list 'load-path user-specific-dir)
 
 (if (file-exists-p system-specific-config) (load system-specific-config))

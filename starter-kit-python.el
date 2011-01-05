@@ -8,11 +8,11 @@
      (setenv "PYTHONPATH"
              (concat
               (getenv "PYTHONPATH") ":"
-              (concat dotfiles-dir "/vendor/emacs-for-python")))
+              (concat vendor-files-dir "/emacs-for-python")))
 
      (setq pymacs-load-path
            (list
-            (concat dotfiles-dir "/vendor/emacs-for-python/ropemacs")))
+            (concat vendor-files-dir "/emacs-for-python/ropemacs")))
 
      ;; Pymacs
      (autoload 'pymacs-apply "pymacs")
@@ -50,7 +50,6 @@
                                (file-name-directory buffer-file-name))))
              (list "pyflakes" (list local-file)))))
        
-
        ;; Show flymake errors without mouse
        (load "flymake-cursor.el")
 
@@ -78,7 +77,6 @@
 ;; Other files for python mode
 (add-to-list 'auto-mode-alist '("wscript" . python-mode))
 (add-to-list 'auto-mode-alist '("SConscript" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 
 (provide 'starter-kit-python)
 ;; starter-kit-python.el ends here

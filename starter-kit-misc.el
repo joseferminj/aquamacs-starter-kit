@@ -89,7 +89,7 @@
                                         "~/Library/Application Support/Aquamacs Emacs/Backups"))))
 
 ;; nxhtml stuff
-(add-to-list 'load-path (concat vendors-files-dir "/nxhtml"))
+(add-to-list 'load-path (concat vendor-files-dir "/nxhtml"))
 (load "autostart.el")
 
 ;; Disable frustating popups

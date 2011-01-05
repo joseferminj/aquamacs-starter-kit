@@ -2,8 +2,11 @@
 ;;
 ;; Part of the Emacs Starter Kit
 
-;; Enable django-nxhtml-mumano-mode
-(add-to-list 'auto-mode-alist '("\\.[sxd]?html$" . django-nxhtml-mumamo-mode))
+;; Enable django-html-mumano-mode
+(add-to-list 'auto-mode-alist '("\\.html$" . django-html-mumamo-mode))
+
+(setq mumamo-chunk-coloring nil)
+(setq mumamo-background-colors nil)
 
 ;; Functions
 (defun django-html-insert-translation (from to &optional buffer)
@@ -19,7 +22,7 @@
       (point-max))))
 
 ;; Hooks
-(dolist (mode '(css-mode-hook html-mode-hook sgml-mode-hook xml-mode-hook django-mode-hook nxml-mode-hook nxhmtl-mode-hook)) 
+(dolist (mode '(django-html-mumamo-mode-hook)) 
   (add-hook mode
             (lambda ()
               (local-set-key "\C-c\C-t" 'django-html-insert-translation)
@@ -28,7 +31,6 @@
             )
   )
 
-;; Load Django (Python) mode
 (require 'django-python-mode)
 
 (provide 'starter-kit-django)
