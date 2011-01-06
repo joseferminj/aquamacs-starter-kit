@@ -31,7 +31,5 @@
             )
   )
 
-(require 'django-python-mode)
-
 (provide 'starter-kit-django)
 ;; starter-kit-django.el ends here
