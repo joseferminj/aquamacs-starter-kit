@@ -153,5 +153,17 @@
             (unless (string-match "question" oddmuse-post)
               (setq oddmuse-post (concat "uihnscuskc=1;" oddmuse-post)))))
 
+;;; Markdown mode try to use TAB like YASNIPPET
+(eval-after-load 'markdown-mode
+  '(progn
+     (define-key markdown-mode-map
+       (kbd "<tab>")
+       (lambda()
+         (interactive)
+         (let ((yas/fallback-behavior 'return-nil))
+           (unless (yas/expand)
+             (message "markdown-cycle should be called")
+             (markdown-cycle)))))))
+
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here
