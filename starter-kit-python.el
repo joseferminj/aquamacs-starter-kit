@@ -51,7 +51,7 @@
              (list "pyflakes" (list local-file)))))
        
        ;; Show flymake errors without mouse
-       (load "flymake-cursor.el")
+       (load "flymake-point.el")
 
        (add-to-list 'flymake-allowed-file-name-masks
                     '("\\.py\\'" flymake-pyflakes-init))
@@ -77,6 +77,11 @@
 ;; Other files for python mode
 (add-to-list 'auto-mode-alist '("wscript" . python-mode))
 (add-to-list 'auto-mode-alist '("SConscript" . python-mode))
+
+;;; Autocomplete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories (concat vendor-files-dir "/auto-complete-1.3.1/dict"))
+(ac-config-default)
 
 (provide 'starter-kit-python)
 ;; starter-kit-python.el ends here
