@@ -50,8 +50,8 @@
                                (file-name-directory buffer-file-name))))
              (list "pyflakes" (list local-file)))))
        
-       ;; Show flymake errors without mouse
-       (load "flymake-cursor.el")
+     ;; Show flymake errors without mouse
+       (load "flymake-point.el")
 
        (add-to-list 'flymake-allowed-file-name-masks
                     '("\\.py\\'" flymake-pyflakes-init))

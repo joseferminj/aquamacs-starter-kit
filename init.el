@@ -33,11 +33,13 @@
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 
 (require 'package)
-(dolist (source '(("technomancy" . "http://repo.technomancy.us/emacs/")
+(dolist (source '(("marmalade" . "http://marmalade-repo.org/packages/")
+                  ("technomancy" . "http://repo.technomancy.us/emacs/")
 		  ("elpa" . "http://tromey.com/elpa/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
 (require 'starter-kit-elpa)
+
 
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session
@@ -49,9 +51,10 @@
 (require 'ansi-color)
 (require 'recentf)
 (require 'psvn)
-
+(require 'package)
 ;; backport some functionality to Emacs 22 if needed
 (require 'dominating-file)
+
 
 ;; Load up starter kit customizations
 
@@ -67,7 +70,7 @@
 (require 'starter-kit-python)
 (require 'starter-kit-yasnippet)
 (require 'starter-kit-django)
-
+(require 'starter-kit-org)
 (regen-autoloads)
 (load custom-file 'noerror)
 

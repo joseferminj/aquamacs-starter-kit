@@ -165,5 +165,8 @@
              (message "markdown-cycle should be called")
              (markdown-cycle)))))))
 
+
+(load-file (concat kitfiles-dir "/elpa" "/color-theme-solarized-1.0.0/color-theme-solarized.el"))
+
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here
