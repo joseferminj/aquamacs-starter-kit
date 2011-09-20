@@ -71,6 +71,8 @@
 (require 'starter-kit-yasnippet)
 (require 'starter-kit-django)
 (require 'starter-kit-org)
+(require 'starter-kit-anything)
+
 (regen-autoloads)
 (load custom-file 'noerror)
 
