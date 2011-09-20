@@ -68,6 +68,12 @@
 (require 'starter-kit-yasnippet)
 (require 'starter-kit-django)
 
+(require 'deft)
+(setq deft-extension "org")
+(setq deft-directory "~/Dropbox/Everything")
+(setq deft-text-mode 'org-mode)
+(global-set-key [f8] 'deft)
+
 (regen-autoloads)
 (load custom-file 'noerror)
 
