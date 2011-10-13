@@ -72,12 +72,18 @@
 (require 'starter-kit-django)
 (require 'starter-kit-org)
 (require 'starter-kit-anything)
+(require 'starter-kit-clojure)
 
 (require 'deft)
 (setq deft-extension "org")
 (setq deft-directory "~/Dropbox/Everything")
 (setq deft-text-mode 'org-mode)
 (global-set-key [f8] 'deft)
+
+;;; Autocomplete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories (concat vendor-files-dir "/auto-complete-1.3.1/dict"))
+(ac-config-default)
 
 (regen-autoloads)
 (load custom-file 'noerror)

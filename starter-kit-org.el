@@ -1,5 +1,5 @@
 ;;; Enable syntax highlighting in source blocks
-(setq org-src-fontify-natively t)
+;;; (setq org-src-fontify-natively t)
 
 ;;; Disable the confirmation before each evaluation
 (setq org-confirm-babel-evaluate nil)
