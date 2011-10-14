@@ -59,6 +59,7 @@
 ;; Load up starter kit customizations
 
 (require 'starter-kit-defuns)
+(require 'starter-kit-anything)
 (require 'starter-kit-bindings)
 (require 'starter-kit-misc)
 (require 'starter-kit-registers)
@@ -71,7 +72,6 @@
 (require 'starter-kit-yasnippet)
 (require 'starter-kit-django)
 (require 'starter-kit-org)
-(require 'starter-kit-anything)
 (require 'starter-kit-clojure)
 
 (require 'deft)
