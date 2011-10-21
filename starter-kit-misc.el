@@ -165,5 +165,8 @@
              (message "markdown-cycle should be called")
              (markdown-cycle)))))))
 
+
+;;; Strart server for terminal interaction
+(server-start)
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here
