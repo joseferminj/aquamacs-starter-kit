@@ -166,7 +166,10 @@
              (markdown-cycle)))))))
 
 
-;;; Strart server for terminal interaction
+;;; Start server for terminal interaction
 (server-start)
+
+(load-file (concat kitfiles-dir "/elpa" "/color-theme-solarized-1.0.0/color-theme-solarized.el"))
+
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here

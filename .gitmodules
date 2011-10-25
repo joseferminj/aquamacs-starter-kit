@@ -1,3 +1,6 @@
 [submodule "vendor/deft"]
 	path = vendor/deft
 	url = git://jblevins.org/git/deft.git
+[submodule "vendor/ac-slime"]
+	path = vendor/ac-slime
+	url = https://github.com/purcell/ac-slime.git
