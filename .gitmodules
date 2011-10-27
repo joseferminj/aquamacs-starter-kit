@@ -4,3 +4,6 @@
 [submodule "vendor/ac-slime"]
 	path = vendor/ac-slime
 	url = https://github.com/purcell/ac-slime.git
+[submodule "vendor/zenburn"]
+	path = vendor/zenburn
+	url = https://github.com/dbrock/zenburn-el.git
