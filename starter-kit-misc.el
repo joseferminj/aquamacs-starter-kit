@@ -165,6 +165,10 @@
              (message "markdown-cycle should be called")
              (markdown-cycle)))))))
 
+;;; Switch between buffers
+(defun switch-to-previous-buffer ()
+  (interactive)
+  (switch-to-buffer (other-buffer)))
 
 (load-file (concat kitfiles-dir "/elpa" "/color-theme-solarized-1.0.0/color-theme-solarized.el"))
 
