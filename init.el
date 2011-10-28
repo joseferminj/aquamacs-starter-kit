@@ -32,6 +32,9 @@
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 
+;;;
+(setq dropbox-everything-dir "~/Dropbox/Everything")
+
 (require 'package)
 (dolist (source '(("marmalade" . "http://marmalade-repo.org/packages/")
                   ("technomancy" . "http://repo.technomancy.us/emacs/")
@@ -76,7 +79,7 @@
 
 (require 'deft)
 (setq deft-extension "org")
-(setq deft-directory "~/Dropbox/Everything")
+(setq deft-directory dropbox-everything-dir)
 (setq deft-text-mode 'org-mode)
 (global-set-key [f8] 'deft)
 
