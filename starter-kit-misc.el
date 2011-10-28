@@ -165,6 +165,10 @@
              (message "markdown-cycle should be called")
              (markdown-cycle)))))))
 
+;;; Switch between buffers
+(defun switch-to-previous-buffer ()
+  (interactive)
+  (switch-to-buffer (other-buffer)))
 
 ;;; Start server for terminal interaction
 (server-start)
