@@ -7,3 +7,6 @@
 [submodule "vendor/zenburn"]
 	path = vendor/zenburn
 	url = https://github.com/dbrock/zenburn-el.git
+[submodule "vendor/magit"]
+	path = vendor/magit
+	url = https://github.com/magit/magit.git

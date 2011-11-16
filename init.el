@@ -62,6 +62,7 @@
 ;; Load up starter kit customizations
 
 (require 'starter-kit-defuns)
+(require 'starter-kit-magit)
 (require 'starter-kit-anything)
 (require 'starter-kit-bindings)
 (require 'starter-kit-misc)
